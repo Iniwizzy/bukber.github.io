@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/flower.css" />
+  </head>
+  <body>
+        <div id="thankyou"><b>Thank you for being my girlfriend</b></div>
+        <!-- <label>
+        <input type="checkbox" name="food" id="pesan" value="Seblak" />
+            Seblak
+        </label> -->
+        <button class="button" onclick="kirimPesan()">
+         Kirim sengg
+        </button>
+      
+        <script>
+            // Function to send WhatsApp message
+            function kirimPesan() {
+            // Get the phone number
+            const phoneNumber = "+6283806272970";
+
+            // Get values from input fields
+            const food = document.getElementById("pesan").value;
+            const dessert = "";
+            const activities = "";
+
+            // Open WhatsApp link with pre-filled message
+            const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(`*Food: *${food}%0a*Dessert: *${dessert}%0a*Activities: *${activities}%0a`)}`;
+            window.open(url, "_blank").focus();
+            }
+        </script>
+    </body>
+</html>
+  

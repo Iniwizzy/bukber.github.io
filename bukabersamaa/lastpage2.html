@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/lastpage.css" />
+  </head>
+  <body>
+        <div id="thankyou"><b>Terimakasih sudah mau bukber bersamakuu</b></div>
+        <label>
+        <form1 id="makanan"><b>Pilih makanan yang kamu centang: </b>
+        <div class="food-item">
+        <input type="checkbox" name="food" id="pesan" value="Seblak" />
+            Seblak
+        </label>
+        </div>
+        <div class="food-item">
+        <input type="checkbox" name="food" id="pesan" value="Bakso" />
+            Bakso
+        </label>
+        </div>
+        <input type="checkbox" name="food" id="pesan" value="Korean food" />
+            Korean food
+        </label>
+        <input type="checkbox" name="food" id="pesan" value="Pasta" />
+            Pasta
+        </label>
+        <input type="checkbox" name="food" id="pesan" value="Pizza" />
+            Pizza
+        </label>
+        <input type="checkbox" name="food" id="pesan" value="Salad" />
+            Salad
+        </label>
+        <input type="checkbox" name="food" id="pesan" value="Steak" />
+            Steak
+        </label>
+        <input type="checkbox" name="food" id="pesan" value="Sushi" />
+            Sushi
+        </label>
+        </form1>
+        </body>
+        <button class="button" onclick="kirimPesan()">
+         Kirim sengg
+        </button>
+      
+        <script>
+            // Function to send WhatsApp message
+            function kirimPesan() {
+            // Get the phone number
+            var phoneNumber = "+6283806272970";
+
+            // Get values from input fields
+            var food = document.getElementById("pesan").ariaValueText;
+            var dessert = "";
+            var activities = "";
+
+            // Open WhatsApp link with pre-filled message
+            var url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(`*Food: *${food}%0a*Dessert: *${dessert}%0a*Activities: *${activities}%0a`)}`;
+            window.open(url, "_blank").focus();
+            }
+        </script>
+    </body>
+</html>
+  
